@@ -1,7 +1,7 @@
 // Angular Category Notes
 export const angularNotes = [
   {
-    id: 8,
+    id: 4000,
     category: 'Angular',
     question: 'What is Angular and what are its key features?',
     answer: `Angular is a TypeScript-based open-source web application framework developed by Google.
@@ -31,7 +31,7 @@ export class UserComponent {
 \`\`\``
   },
   {
-    id: 9,
+    id: 4001,
     category: 'Angular',
     question: 'What is the difference between Angular services and components?',
     answer: `**Components:**

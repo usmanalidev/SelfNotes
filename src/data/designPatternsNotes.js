@@ -1,7 +1,7 @@
 // Design Patterns Category Notes - Comprehensive with Deep Explanations
 export const designPatternsNotes = [
   {
-    id: 30,
+    id: 5000,
     category: 'Design Patterns',
     question: 'What are SOLID Principles?',
     answer: `**One-Sentence Definition:** SOLID is a set of five object-oriented design principles that make software more maintainable, flexible, and understandable.
@@ -90,7 +90,7 @@ interface ISleepable {
 \`\`\``
   },
   {
-    id: 31,
+    id: 5001,
     category: 'Design Patterns',
     question: 'What is the Factory Pattern? (Deep Explanation)',
     answer: `**One-Sentence Definition:** Factory Pattern creates objects without specifying the exact class, delegating object creation to a factory method.
@@ -179,7 +179,7 @@ factory.ProcessOrder(50.00m); // Uses PayPalPayment
 - Centralized object creation logic`
   },
   {
-    id: 32,
+    id: 5002,
     category: 'Design Patterns',
     question: 'What is the Repository Pattern? (Deep Explanation)',
     answer: `**One-Sentence Definition:** Repository Pattern abstracts data access logic, providing a collection-like interface for accessing domain objects.
@@ -308,7 +308,7 @@ public class UserService {
 - Separation of concerns`
   },
   {
-    id: 33,
+    id: 5003,
     category: 'Design Patterns',
     question: 'What is the Singleton Pattern? (Deep Explanation)',
     answer: `**One-Sentence Definition:** Singleton ensures a class has only one instance and provides global access to it.
@@ -406,7 +406,7 @@ services.AddSingleton<ILogger, Logger>();
 \`\`\``
   },
   {
-    id: 34,
+    id: 5004,
     category: 'Design Patterns',
     question: 'What is the Strategy Pattern? (Deep Explanation)',
     answer: `**One-Sentence Definition:** Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable at runtime.
@@ -522,7 +522,7 @@ public class PaymentProcessor {
 - Isolates algorithm implementation`
   },
   {
-    id: 35,
+    id: 5005,
     category: 'Design Patterns',
     question: 'What is the Observer Pattern? (Deep Explanation)',
     answer: `**One-Sentence Definition:** Observer Pattern defines a one-to-many dependency between objects, so when one object changes state, all dependents are notified automatically.
@@ -681,7 +681,7 @@ agency.PublishNews("Breaking news!");
 \`\`\``
   },
   {
-    id: 36,
+    id: 5006,
     category: 'Design Patterns',
     question: 'What is the Decorator Pattern? (Deep Explanation)',
     answer: `**One-Sentence Definition:** Decorator Pattern allows behavior to be added to individual objects dynamically without affecting other objects of the same class.
@@ -800,7 +800,7 @@ Console.WriteLine($"{coffee.GetDescription()}: \${coffee.GetCost()}");
 - Decorator: Dynamic, runtime (1 base + 3 decorators = infinite combinations)`
   },
   {
-    id: 37,
+    id: 5007,
     category: 'Design Patterns',
     question: 'What is the Adapter Pattern? (Deep Explanation)',
     answer: `**One-Sentence Definition:** Adapter Pattern allows incompatible interfaces to work together by wrapping an object with an adapter that translates between them.
@@ -920,7 +920,7 @@ public class DatabaseAdapter : IRepository {
 2. **Class Adapter:** Uses inheritance (extends adaptee) - not possible in C# (single inheritance)`
   },
   {
-    id: 38,
+    id: 5008,
     category: 'Design Patterns',
     question: 'What is the Builder Pattern? (Deep Explanation)',
     answer: `**One-Sentence Definition:** Builder Pattern constructs complex objects step by step, allowing you to produce different types and representations using the same construction code.
@@ -1068,7 +1068,7 @@ var query = new StringBuilder()
 - **Abstract Factory:** Creates families of objects`
   },
   {
-    id: 39,
+    id: 5009,
     category: 'Design Patterns',
     question: 'What is the Command Pattern? (Deep Explanation)',
     answer: `**One-Sentence Definition:** Command Pattern encapsulates a request as an object, allowing you to parameterize clients with different requests, queue operations, and support undo operations.
@@ -1225,7 +1225,7 @@ public class CommandQueue {
 - Job queues`
   },
   {
-    id: 40,
+    id: 5010,
     category: 'Design Patterns',
     question: 'What is the Facade Pattern? (Deep Explanation)',
     answer: `**One-Sentence Definition:** Facade Pattern provides a simplified interface to a complex subsystem, hiding its complexity behind a single interface.

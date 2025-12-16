@@ -1,7 +1,7 @@
 // MVC Category Notes
 export const mvcNotes = [
   {
-    id: 50,
+    id: 8000,
     category: 'MVC',
     question: 'What is MVC and MVC Application Lifecycle?',
     answer: `**One-Sentence Definition:** MVC (Model-View-Controller) is an architectural pattern that separates application into three components: Model (data), View (UI), and Controller (logic).
@@ -59,7 +59,7 @@ public class UserController : Controller {
 \`\`\``
   },
   {
-    id: 51,
+    id: 8001,
     category: 'MVC',
     question: 'What is the difference between ViewData, ViewBag, and TempData?',
     answer: `**One-Sentence Definition:** ViewData and ViewBag pass data from controller to view in the same request, while TempData persists data across redirects.
@@ -110,7 +110,7 @@ public IActionResult Create(User user) {
 \`\`\``
   },
   {
-    id: 52,
+    id: 8002,
     category: 'MVC',
     question: 'What are Action Filters in MVC?',
     answer: `**One-Sentence Definition:** Action Filters are attributes that allow you to add pre-action and post-action behavior to controller actions, like authorization, logging, or exception handling.
@@ -171,7 +171,7 @@ public class CustomExceptionFilter : IExceptionFilter {
 \`\`\``
   },
   {
-    id: 53,
+    id: 8003,
     category: 'MVC',
     question: 'What is Routing in MVC and its types?',
     answer: `**One-Sentence Definition:** Routing maps URLs to controller actions, determining which controller and action method should handle a request.
@@ -242,7 +242,7 @@ public class ProductController : Controller {
 \`\`\``
   },
   {
-    id: 54,
+    id: 8004,
     category: 'MVC',
     question: 'What is the difference between Session and Cookie?',
     answer: `**One-Sentence Definition:** Session stores data on the server for a user session, while Cookies store data on the client's browser.

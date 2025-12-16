@@ -2,7 +2,6 @@ import React, { useMemo } from 'react';
 import { Collapse, Typography, Empty, Card, Button, Space } from 'antd';
 import { QuestionCircleOutlined, EditOutlined } from '@ant-design/icons';
 
-const { Panel } = Collapse;
 const { Title, Paragraph } = Typography;
 
 const NotesDisplay = ({ notes, selectedCategory, searchQuery, onEditNote, theme }) => {
@@ -113,53 +112,51 @@ const NotesDisplay = ({ notes, selectedCategory, searchQuery, onEditNote, theme 
           <QuestionCircleOutlined rotate={isActive ? 90 : 0} />
         )}
         className={`notes-collapse ${theme}`}
-      >
-        {filteredNotes.map((note) => (
-          <Panel
-            key={note.id}
-            header={
-              <div className={`panel-header ${theme}`} style={{ 
-                fontWeight: 600, 
-                fontSize: '16px'
-              }}>
-                {note.question}
-              </div>
-            }
-            extra={
-              onEditNote && (
-                <Button
-                  type="text"
-                  icon={<EditOutlined />}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onEditNote(note);
-                  }}
-                  className="edit-btn"
-                >
-                  Edit
-                </Button>
-              )
-            }
-            className={`note-panel ${theme}`}
-          >
-            <Paragraph className={`note-answer ${theme}`} style={{ 
-              fontSize: '15px', 
-              lineHeight: '1.8',
-              marginBottom: 0,
-              whiteSpace: 'pre-wrap'
+        items={filteredNotes.map((note) => ({
+          key: note.id,
+          label: (
+            <div className={`panel-header ${theme}`} style={{ 
+              fontWeight: 600, 
+              fontSize: '16px'
             }}>
-              {formatAnswer(note.answer)}
-            </Paragraph>
-            <div className={`note-footer ${theme}`} style={{ 
-              marginTop: '16px', 
-              paddingTop: '12px',
-              fontSize: '12px'
-            }}>
-              Category: <strong>{note.category}</strong>
+              {note.question}
             </div>
-          </Panel>
-        ))}
-      </Collapse>
+          ),
+          extra: onEditNote && (
+            <Button
+              type="text"
+              icon={<EditOutlined />}
+              onClick={(e) => {
+                e.stopPropagation();
+                onEditNote(note);
+              }}
+              className="edit-btn"
+            >
+              Edit
+            </Button>
+          ),
+          children: (
+            <>
+              <Paragraph className={`note-answer ${theme}`} style={{ 
+                fontSize: '15px', 
+                lineHeight: '1.8',
+                marginBottom: 0,
+                whiteSpace: 'pre-wrap'
+              }}>
+                {formatAnswer(note.answer)}
+              </Paragraph>
+              <div className={`note-footer ${theme}`} style={{ 
+                marginTop: '16px', 
+                paddingTop: '12px',
+                fontSize: '12px'
+              }}>
+                Category: <strong>{note.category}</strong>
+              </div>
+            </>
+          ),
+          className: `note-panel ${theme}`
+        }))}
+      />
     </div>
   );
 };

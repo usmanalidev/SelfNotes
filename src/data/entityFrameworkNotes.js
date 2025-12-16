@@ -1,7 +1,7 @@
 // Entity Framework Category Notes
 export const entityFrameworkNotes = [
   {
-    id: 40,
+    id: 6000,
     category: 'Entity Framework',
     question: 'What is the difference between Lazy Loading and Eager Loading?',
     answer: `**One-Sentence Definition:** Lazy Loading loads related data on-demand when accessed, while Eager Loading loads related data immediately with the main query.
@@ -51,7 +51,7 @@ var users = context.Users
 \`\`\``
   },
   {
-    id: 41,
+    id: 6001,
     category: 'Entity Framework',
     question: 'What is the N+1 Problem in Entity Framework?',
     answer: `**One-Sentence Definition:** N+1 problem occurs when you execute 1 query to get a list, then N additional queries (one per item) to load related data, resulting in N+1 total queries.
@@ -96,7 +96,7 @@ context.Entry(users[0])
 \`\`\``
   },
   {
-    id: 42,
+    id: 6002,
     category: 'Entity Framework',
     question: 'How to improve performance in Entity Framework?',
     answer: `**One-Sentence Definition:** EF performance can be improved by using proper loading strategies, avoiding unnecessary queries, using compiled queries, and optimizing LINQ expressions.
@@ -157,7 +157,7 @@ context.SaveChanges(); // One query
 \`\`\``
   },
   {
-    id: 43,
+    id: 6003,
     category: 'Entity Framework',
     question: 'What is the difference between IQueryable and IEnumerable in EF?',
     answer: `**One-Sentence Definition:** IQueryable builds SQL queries that execute on the database, while IEnumerable executes queries in memory after data is loaded.

@@ -1,7 +1,7 @@
 // C# Category Notes - Comprehensive Interview Preparation
 export const csharpNotes = [
   {
-    id: 10,
+    id: 3000,
     category: 'C#',
     question: 'What is the difference between value types and reference types in C#?',
     answer: `**One-Sentence Definition:** Value types store data directly on the stack, while reference types store a reference (pointer) to data on the heap.
@@ -39,7 +39,7 @@ p2.Name = "Jane";      // p1.Name is also "Jane"
 \`\`\``
   },
   {
-    id: 11,
+    id: 3001,
     category: 'C#',
     question: 'What is the difference between abstract class and interface?',
     answer: `**One-Sentence Definition:** Abstract classes can have both abstract and concrete methods with fields, while interfaces define contracts that classes must implement.
@@ -99,7 +99,7 @@ class Bird : Animal, IFlyable { // Multiple inheritance
 \`\`\``
   },
   {
-    id: 12,
+    id: 3002,
     category: 'C#',
     question: 'What is the difference between const, readonly, and static?',
     answer: `**One-Sentence Definition:** const is compile-time constant, readonly is runtime constant that can be set in constructor, and static belongs to the class rather than instances.
@@ -149,7 +149,7 @@ Console.WriteLine(MyClass.InstanceCount); // 2
 \`\`\``
   },
   {
-    id: 13,
+    id: 3003,
     category: 'C#',
     question: 'What is the difference between ref and out keywords?',
     answer: `**One-Sentence Definition:** Both allow passing parameters by reference, but ref requires initialization before passing, while out doesn't require initialization but must be assigned in the method.
@@ -211,7 +211,7 @@ void Calculate(int a, int b, out int s, out int p) {
 \`\`\``
   },
   {
-    id: 14,
+    id: 3004,
     category: 'C#',
     question: 'What is the difference between var and dynamic?',
     answer: `**One-Sentence Definition:** var is compile-time type inference (type is determined at compile time), while dynamic is runtime type resolution (type checking happens at runtime).
@@ -259,7 +259,7 @@ string name = json.Name; // No compile-time checking
 \`\`\``
   },
   {
-    id: 15,
+    id: 3005,
     category: 'C#',
     question: 'What is the difference between String and StringBuilder?',
     answer: `**One-Sentence Definition:** String is immutable (cannot be changed), while StringBuilder is mutable and efficient for multiple string operations.
@@ -305,7 +305,7 @@ string name = "John" + " " + "Doe"; // OK for few operations
 \`\`\``
   },
   {
-    id: 16,
+    id: 3006,
     category: 'C#',
     question: 'What is the difference between compile-time and runtime polymorphism?',
     answer: `**One-Sentence Definition:** Compile-time polymorphism (method overloading) is resolved at compile time, while runtime polymorphism (method overriding) is resolved at runtime based on object type.
@@ -370,7 +370,7 @@ animal.MakeSound(); // "Woof!" - runtime determines which method
 \`\`\``
   },
   {
-    id: 17,
+    id: 3007,
     category: 'C#',
     question: 'What are Delegates and Events in C#?',
     answer: `**One-Sentence Definition:** Delegates are type-safe function pointers that hold references to methods, and events are a special type of delegate for implementing the observer pattern.
@@ -423,7 +423,7 @@ Predicate<int> isEven = n => n % 2 == 0; // Returns bool
 \`\`\``
   },
   {
-    id: 18,
+    id: 3008,
     category: 'C#',
     question: 'What are Generics in C#?',
     answer: `**One-Sentence Definition:** Generics allow you to define classes, methods, and interfaces with type parameters, enabling code reuse with type safety.
@@ -482,7 +482,7 @@ string maxStr = Max("apple", "zebra"); // "zebra"
 \`\`\``
   },
   {
-    id: 19,
+    id: 3009,
     category: 'C#',
     question: 'What is the difference between deep copy and shallow copy?',
     answer: `**One-Sentence Definition:** Shallow copy creates a new object but copies references to nested objects, while deep copy creates new copies of all nested objects recursively.
@@ -534,7 +534,7 @@ deep.Address.Street = "789 Pine"; // Original unchanged
 \`\`\``
   },
   {
-    id: 20,
+    id: 3010,
     category: 'C#',
     question: 'What is the difference between Stack and Heap?',
     answer: `**One-Sentence Definition:** Stack is fast memory for value types and method calls, while Heap is slower memory for reference types that requires garbage collection.

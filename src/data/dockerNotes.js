@@ -84,7 +84,6 @@ Docker is fundamental to modern software development and deployment, especially 
 - Stored in layers
 - Can't be modified (immutable)
 - Shared across containers
-- Example: `node:18`, `nginx:latest`
 
 **Container:**
 - Running instance of image
@@ -139,33 +138,27 @@ Understanding the image-container relationship is fundamental to using Docker ef
 **1. FROM:**
 - Sets base image
 - Must be first instruction
-- Example: `FROM node:18`
 
 **2. WORKDIR:**
 - Sets working directory
 - Creates directory if doesn't exist
-- Example: `WORKDIR /app`
 
 **3. COPY/ADD:**
 - Copies files from host to image
 - COPY is preferred (simpler)
-- Example: `COPY package.json .`
 
 **4. RUN:**
 - Executes commands during build
 - Creates new layer
-- Example: `RUN npm install`
 
 **5. EXPOSE:**
 - Documents which ports app uses
 - Doesn't actually publish ports
-- Example: `EXPOSE 3000`
 
 **6. CMD/ENTRYPOINT:**
 - Defines command to run when container starts
 - CMD can be overridden
 - ENTRYPOINT cannot be overridden
-- Example: `CMD ["node", "server.js"]`
 
 **Example Dockerfile:**
 \`\`\`dockerfile
@@ -201,7 +194,6 @@ CMD ["node", "server.js"]
 \`\`\`
 
 **Best Practices:**
-- Use specific tags (not `latest`)
 - Order instructions by change frequency
 - Use multi-stage builds for smaller images
 - Don't run as root
@@ -410,26 +402,22 @@ Docker Compose is essential for managing complex multi-container applications, e
 - Containers can communicate by name
 - Isolated from host network
 - Good for single-host scenarios
-- Example: `docker network create mybridge`
 
 **2. Host Network:**
 - Container uses host's network directly
 - No network isolation
 - Better performance
 - Linux only
-- Example: `docker run --network host nginx`
 
 **3. None Network:**
 - Container has no network access
 - Completely isolated
 - Use for security-sensitive containers
-- Example: `docker run --network none alpine`
 
 **4. Overlay Network:**
 - Connects multiple Docker hosts
 - Used in Docker Swarm, Kubernetes
 - Enables service discovery across hosts
-- Example: `docker network create --driver overlay myoverlay`
 
 **5. Macvlan Network:**
 - Assigns MAC address to container
@@ -1016,7 +1004,6 @@ secrets:
 \`\`\`
 
 **Accessing Secrets in Container:**
-- Secrets mounted at `/run/secrets/<secret_name>`
 - Read-only files
 - Can be read by application
 - Automatically removed when service stops
@@ -1264,7 +1251,6 @@ Understanding CMD vs ENTRYPOINT is fundamental to writing effective Dockerfiles 
 - Default public registry
 - Free for public images
 - Paid plans for private images
-- Example: `docker pull nginx`
 
 **2. Private Registries:**
 - Self-hosted or cloud-managed
@@ -1332,7 +1318,6 @@ docker run -d -p 5000:5000 \
 \`\`\`
 
 **Best Practices:**
-- Use specific tags (not just `latest`)
 - Sign images for security
 - Scan images for vulnerabilities
 - Use private registries for production

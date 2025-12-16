@@ -59,7 +59,7 @@ const AddNoteModal = ({ visible, onCancel, onSave, categories, editingNote }) =>
         </Button>
       ]}
       width={600}
-      destroyOnClose
+      destroyOnHidden
     >
       <Form
         form={form}

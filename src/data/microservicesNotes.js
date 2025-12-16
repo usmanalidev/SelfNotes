@@ -1,7 +1,7 @@
 // Microservices Category Notes - Comprehensive
 export const microservicesNotes = [
   {
-    id: 12,
+    id: 7000,
     category: 'Microservices',
     question: 'What are Microservices and what are their advantages?',
     answer: `**One-Sentence Definition:** Microservices is an architectural approach where an application is built as a collection of small, independent services that communicate over well-defined APIs.
@@ -35,7 +35,7 @@ export const microservicesNotes = [
 \`\`\``
   },
   {
-    id: 13,
+    id: 7001,
     category: 'Microservices',
     question: 'What is API Gateway pattern in Microservices?',
     answer: `**One-Sentence Definition:** API Gateway is a single entry point for all client requests in a microservices architecture, handling routing, authentication, load balancing, and other cross-cutting concerns.
@@ -75,7 +75,7 @@ Client → Service C
 - Ambassador`
   },
   {
-    id: 14,
+    id: 7002,
     category: 'Microservices',
     question: 'What are the challenges of Microservices architecture?',
     answer: `**One-Sentence Definition:** Microservices introduce challenges including distributed system complexity, data management, testing difficulties, deployment orchestration, monitoring, and service communication overhead.
@@ -128,7 +128,7 @@ Client → Service C
 - API Gateway for routing`
   },
   {
-    id: 15,
+    id: 7003,
     category: 'Microservices',
     question: 'What is Apache Kafka and how does it work in Microservices?',
     answer: `**One-Sentence Definition:** Apache Kafka is a distributed event streaming platform that enables microservices to communicate asynchronously through publish-subscribe messaging, providing high throughput, fault tolerance, and real-time data processing.
@@ -187,7 +187,7 @@ Producer → Topic (Partition 0, 1, 2) → Consumer Group
 - Activity tracking`
   },
   {
-    id: 16,
+    id: 7004,
     category: 'Microservices',
     question: 'What is Dead Letter Queue (DLQ) in Kafka?',
     answer: `**One-Sentence Definition:** Dead Letter Queue (DLQ) in Kafka is a special topic where messages that cannot be processed successfully after multiple retry attempts are sent for manual inspection, debugging, and potential reprocessing.
@@ -282,7 +282,7 @@ private void sendToDLQ(ConsumerRecord<String, Order> record, Exception error) {
 DLQ is crucial for production systems to handle failures gracefully and prevent message loss, showing you understand error handling in distributed systems.`
   },
   {
-    id: 17,
+    id: 7005,
     category: 'Microservices',
     question: 'What are Kafka Consumer Groups and how do they work?',
     answer: `**One-Sentence Definition:** Consumer Groups in Kafka allow multiple consumers to work together to process messages from a topic in parallel, with each message processed by only one consumer in the group, enabling horizontal scaling.
@@ -346,7 +346,7 @@ props.put("value.deserializer", OrderDeserializer.class);
 - Different groups can process same messages independently`
   },
   {
-    id: 18,
+    id: 7006,
     category: 'Microservices',
     question: 'What is RabbitMQ and how does it differ from Kafka?',
     answer: `**One-Sentence Definition:** RabbitMQ is a message broker that implements the Advanced Message Queuing Protocol (AMQP), providing reliable message delivery, routing, and queuing for microservices communication.
@@ -436,7 +436,7 @@ channel.basicConsume("order-processor", true, consumer);
 - Event sourcing`
   },
   {
-    id: 19,
+    id: 7007,
     category: 'Microservices',
     question: 'What are the different communication patterns in Microservices?',
     answer: `**One-Sentence Definition:** Microservices communicate through synchronous patterns (REST, gRPC) for request-response and asynchronous patterns (message queues, event streaming) for decoupled, event-driven communication.
@@ -515,7 +515,7 @@ public void handleUserCreated(UserCreatedEvent event) {
 - **Asynchronous**: When services can be decoupled, high throughput needed, eventual consistency acceptable`
   },
   {
-    id: 20,
+    id: 7008,
     category: 'Microservices',
     question: 'What is Event-Driven Architecture in Microservices?',
     answer: `**One-Sentence Definition:** Event-Driven Architecture is a pattern where microservices communicate by producing and consuming events, enabling loose coupling, scalability, and real-time responsiveness through asynchronous event processing.
@@ -582,7 +582,7 @@ Event Stream (Kafka)
 Event-driven architecture is fundamental to modern microservices, enabling scalable, decoupled systems that can react to changes in real-time.`
   },
   {
-    id: 21,
+    id: 7009,
     category: 'Microservices',
     question: 'What is Service Mesh and why is it used?',
     answer: `**One-Sentence Definition:** Service Mesh is an infrastructure layer that handles service-to-service communication, providing observability, security, and traffic management without requiring changes to application code.
@@ -646,7 +646,7 @@ Service A → Sidecar Proxy → Network → Sidecar Proxy → Service B
 Service mesh is a key technology for managing complex microservices architectures, showing you understand modern infrastructure patterns.`
   },
   {
-    id: 22,
+    id: 7010,
     category: 'Microservices',
     question: 'What is Circuit Breaker pattern in Microservices?',
     answer: `**One-Sentence Definition:** Circuit Breaker pattern prevents cascading failures by stopping requests to a failing service, allowing it to recover, and providing fallback responses until the service is healthy again.
@@ -702,7 +702,7 @@ public User fallback(Long id, Exception e) {
 Circuit breaker is essential for building resilient microservices that can handle failures gracefully and prevent system-wide outages.`
   },
   {
-    id: 23,
+    id: 7011,
     category: 'Microservices',
     question: 'What is Saga pattern for distributed transactions?',
     answer: `**One-Sentence Definition:** Saga pattern manages distributed transactions across multiple microservices by breaking them into a sequence of local transactions with compensating actions for rollback, avoiding the need for distributed locks.

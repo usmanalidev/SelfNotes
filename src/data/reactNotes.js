@@ -1,7 +1,7 @@
 // React JS Category Notes - Comprehensive Interview Preparation
 export const reactNotes = [
   {
-    id: 3,
+    id: 1000,
     category: 'React JS',
     question: 'What are React Hooks and why were they introduced?',
     answer: `**One-Sentence Definition:** React Hooks are functions that let you "hook into" React state and lifecycle features from function components without writing class components.
@@ -45,7 +45,7 @@ function Counter() {
 \`\`\``
   },
   {
-    id: 4,
+    id: 1001,
     category: 'React JS',
     question: 'Explain the Virtual DOM in React',
     answer: `**One-Sentence Definition:** The Virtual DOM is a lightweight JavaScript representation of the real DOM that React uses to optimize updates by comparing changes before applying them to the actual DOM.
@@ -76,7 +76,7 @@ When you update state, React doesn't immediately update the DOM. Instead, it:
 Understanding Virtual DOM shows you know how React optimizes performance and why it's faster than direct DOM manipulation.`
   },
   {
-    id: 5,
+    id: 1002,
     category: 'React JS',
     question: 'What is the difference between controlled and uncontrolled components?',
     answer: `**One-Sentence Definition:** Controlled components have their value controlled by React state, while uncontrolled components store their value in the DOM and are accessed via refs.
@@ -125,7 +125,7 @@ function UncontrolledInput() {
 - Uncontrolled: Simple forms, integrating with non-React code, file inputs`
   },
   {
-    id: 6,
+    id: 1003,
     category: 'React JS',
     question: 'What is the difference between useState and useReducer?',
     answer: `**One-Sentence Definition:** useState is for simple state management with direct value updates, while useReducer is for complex state logic with multiple sub-values and predictable state transitions.
@@ -193,7 +193,7 @@ function Counter() {
 - Easier to test and debug`
   },
   {
-    id: 7,
+    id: 1004,
     category: 'React JS',
     question: 'What is the purpose of useEffect hook?',
     answer: `**One-Sentence Definition:** useEffect lets you perform side effects in function components, such as data fetching, subscriptions, or manually changing the DOM, similar to componentDidMount, componentDidUpdate, and componentWillUnmount combined.
@@ -249,7 +249,7 @@ useEffect(() => {
 \`\`\``
   },
   {
-    id: 8,
+    id: 1005,
     category: 'React JS',
     question: 'What is the difference between useMemo and useCallback?',
     answer: `**One-Sentence Definition:** useMemo memoizes the result of a computation, while useCallback memoizes a function itself to prevent unnecessary re-creations.
@@ -305,7 +305,7 @@ const Child = React.memo(({ items, onClick }) => {
 - useCallback: Passing functions to memoized children, preventing unnecessary re-renders`
   },
   {
-    id: 9,
+    id: 1006,
     category: 'React JS',
     question: 'What is React.memo and when should you use it?',
     answer: `**One-Sentence Definition:** React.memo is a higher-order component that memoizes a component, preventing re-renders when props haven't changed.
@@ -356,7 +356,7 @@ const ExpensiveComponent = React.memo(
 - Premature optimization`
   },
   {
-    id: 10,
+    id: 1007,
     category: 'React JS',
     question: 'What is the difference between useRef and useState?',
     answer: `**One-Sentence Definition:** useState triggers re-renders when the value changes, while useRef doesn't trigger re-renders and persists across renders.
@@ -424,7 +424,7 @@ function InputFocus() {
 - Timer IDs, interval IDs`
   },
   {
-    id: 11,
+    id: 1008,
     category: 'React JS',
     question: 'What is Context API and when should you use it?',
     answer: `**One-Sentence Definition:** Context API provides a way to pass data through the component tree without having to pass props down manually at every level (prop drilling).
@@ -480,7 +480,7 @@ function Button() {
 - Complex state management (use Redux, Zustand, etc.)`
   },
   {
-    id: 12,
+    id: 1009,
     category: 'React JS',
     question: 'What are Higher-Order Components (HOCs)?',
     answer: `**One-Sentence Definition:** Higher-Order Components are functions that take a component and return a new component with additional functionality.
@@ -536,7 +536,7 @@ function withAuth(Component) {
 - Modern React prefers Hooks for most use cases`
   },
   {
-    id: 13,
+    id: 1010,
     category: 'React JS',
     question: 'What is the difference between React.PureComponent and React.Component?',
     answer: `**One-Sentence Definition:** PureComponent automatically implements shouldComponentUpdate with a shallow prop and state comparison, while Component requires manual implementation of shouldComponentUpdate.
@@ -595,7 +595,7 @@ function App() {
 - Function components: use React.memo instead`
   },
   {
-    id: 14,
+    id: 1011,
     category: 'React JS',
     question: 'What are React Portals and when should you use them?',
     answer: `**One-Sentence Definition:** React Portals provide a way to render children into a DOM node that exists outside the DOM hierarchy of the parent component.
@@ -651,7 +651,7 @@ function App() {
 - Full-screen overlays`
   },
   {
-    id: 15,
+    id: 1012,
     category: 'React JS',
     question: 'What is the purpose of keys in React lists?',
     answer: `**One-Sentence Definition:** Keys help React identify which items have changed, been added, or removed, enabling efficient updates to the list.
@@ -703,7 +703,7 @@ function UserList({ users }) {
 - Don't generate keys in render (creates new keys each time)`
   },
   {
-    id: 16,
+    id: 1013,
     category: 'React JS',
     question: 'What is the difference between Element and Component in React?',
     answer: `**One-Sentence Definition:** An Element is a plain object describing what you want to see on screen, while a Component is a function or class that returns Elements.
@@ -743,7 +743,7 @@ const element = <Welcome name="Sara" />;
 - Components must return elements (or null)`
   },
   {
-    id: 17,
+    id: 1014,
     category: 'React JS',
     question: 'What is React Fiber?',
     answer: `**One-Sentence Definition:** React Fiber is the reconciliation algorithm rewrite that enables incremental rendering, allowing React to split work into chunks and prioritize updates.
@@ -793,7 +793,7 @@ startTransition(() => {
 Shows understanding of React's internal architecture and how it achieves better performance and user experience.`
   },
   {
-    id: 18,
+    id: 1015,
     category: 'React JS',
     question: 'What are Custom Hooks and how do you create them?',
     answer: `**One-Sentence Definition:** Custom Hooks are JavaScript functions that start with "use" and can call other Hooks, allowing you to extract and reuse stateful logic between components.
@@ -869,7 +869,7 @@ function useLocalStorage(key, initialValue) {
 - Share logic across components`
   },
   {
-    id: 19,
+    id: 1016,
     category: 'React JS',
     question: 'What is the difference between props and state?',
     answer: `**One-Sentence Definition:** Props are data passed from parent to child (read-only), while state is data managed within a component that can change over time.
@@ -924,7 +924,7 @@ function UserCard({ userId }) { // Props
 - Use props for configuration, state for interactivity`
   },
   {
-    id: 20,
+    id: 1017,
     category: 'React JS',
     question: 'What is React Suspense and how does it work?',
     answer: `**One-Sentence Definition:** React Suspense lets components "wait" for something (like data loading) before rendering, displaying a fallback UI in the meantime.
@@ -980,7 +980,7 @@ function App() {
 - Part of Concurrent React features`
   },
   {
-    id: 21,
+    id: 1018,
     category: 'React JS',
     question: 'What is the purpose of React.Fragment?',
     answer: `**One-Sentence Definition:** React.Fragment lets you group multiple elements without adding an extra DOM node, useful when you need to return multiple elements from a component.
@@ -1041,7 +1041,7 @@ function List({ items }) {
 - Cleaner DOM structure`
   },
   {
-    id: 22,
+    id: 1019,
     category: 'React JS',
     question: 'What is the difference between class components and function components?',
     answer: `**One-Sentence Definition:** Class components use ES6 classes and have access to lifecycle methods and state, while function components are simpler JavaScript functions that use Hooks for state and effects.
@@ -1113,7 +1113,7 @@ function Counter() {
 - Easier to test and maintain`
   },
   {
-    id: 23,
+    id: 1020,
     category: 'React JS',
     question: 'What is React Router and how does it work?',
     answer: `**One-Sentence Definition:** React Router is a library for routing in React applications, enabling navigation between different views/components based on the URL.
@@ -1175,7 +1175,7 @@ function Users() {
 - Programmatic navigation`
   },
   {
-    id: 24,
+    id: 1021,
     category: 'React JS',
     question: 'What are React Error Boundaries?',
     answer: `**One-Sentence Definition:** Error Boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of crashing the whole app.
@@ -1244,7 +1244,7 @@ function App() {
 - Errors in the error boundary itself`
   },
   {
-    id: 25,
+    id: 1022,
     category: 'React JS',
     question: 'What is the purpose of useLayoutEffect?',
     answer: `**One-Sentence Definition:** useLayoutEffect is similar to useEffect, but it runs synchronously after all DOM mutations, before the browser paints, useful for measurements and DOM manipulations that need to happen before the user sees the update.
@@ -1304,7 +1304,7 @@ function Tooltip({ children, text }) {
 - When timing doesn't matter`
   },
   {
-    id: 26,
+    id: 1023,
     category: 'React JS',
     question: 'What is code splitting in React?',
     answer: `**One-Sentence Definition:** Code splitting is a technique to split your JavaScript bundle into smaller chunks that are loaded on-demand, reducing initial load time and improving performance.
@@ -1370,7 +1370,7 @@ function App() {
 - Load only what's needed`
   },
   {
-    id: 27,
+    id: 1024,
     category: 'React JS',
     question: 'What is the difference between shallow and deep comparison?',
     answer: `**One-Sentence Definition:** Shallow comparison checks if two objects have the same references, while deep comparison checks if all nested properties and values are equal.
@@ -1429,7 +1429,7 @@ function deepEqual(obj1, obj2) {
 - Prefer immutable updates to avoid deep comparison needs`
   },
   {
-    id: 28,
+    id: 1025,
     category: 'React JS',
     question: 'What are React Server Components?',
     answer: `**One-Sentence Definition:** React Server Components are components that render on the server, allowing you to build apps that combine server-rendered and client-rendered components for optimal performance.
@@ -1486,7 +1486,7 @@ function InteractiveButton() {
 - Client Components: Interactivity, browser APIs, state, effects`
   },
   {
-    id: 29,
+    id: 1026,
     category: 'React JS',
     question: 'What is the purpose of useImperativeHandle?',
     answer: `**One-Sentence Definition:** useImperativeHandle customizes the instance value that is exposed when using ref, allowing parent components to access specific methods or properties of a child component.
@@ -1549,7 +1549,7 @@ function Form() {
 - Makes components harder to reason about`
   },
   {
-    id: 30,
+    id: 1027,
     category: 'React JS',
     question: 'What is the difference between useCallback and useMemo?',
     answer: `**One-Sentence Definition:** useCallback memoizes a function to prevent recreation on every render, while useMemo memoizes the result of a computation to avoid recalculating it.
@@ -1620,7 +1620,7 @@ function ExpensiveList({ items, filter }) {
 - Measure before optimizing`
   },
   {
-    id: 31,
+    id: 1028,
     category: 'React JS',
     question: 'What is React.StrictMode and why is it used?',
     answer: `**One-Sentence Definition:** React.StrictMode is a development tool that highlights potential problems in your application by intentionally double-invoking certain functions and detecting unsafe lifecycles.
@@ -1677,7 +1677,7 @@ function MyComponent() {
 - Helps write better React code`
   },
   {
-    id: 32,
+    id: 1029,
     category: 'React JS',
     question: 'What is the purpose of React.lazy?',
     answer: `**One-Sentence Definition:** React.lazy allows you to dynamically import and render a component only when it's needed, enabling code splitting and reducing initial bundle size.

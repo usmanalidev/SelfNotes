@@ -1,7 +1,7 @@
 // SQL Category Notes - Comprehensive Interview Preparation
 export const sqlNotes = [
   {
-    id: 5,
+    id: 2000,
     category: 'SQL',
     question: 'What is the difference between INNER JOIN and LEFT JOIN?',
     answer: `**One-Sentence Definition:** INNER JOIN returns only matching rows from both tables, while LEFT JOIN returns all rows from the left table and matching rows from the right table.
@@ -41,7 +41,7 @@ LEFT JOIN orders o ON u.id = o.user_id;
 \`\`\``
   },
   {
-    id: 6,
+    id: 2001,
     category: 'SQL',
     question: 'What is a database index and why is it important?',
     answer: `**One-Sentence Definition:** An index is a data structure that speeds up data retrieval by creating a quick lookup path, similar to a book's index.
@@ -85,7 +85,7 @@ SELECT * FROM Users WHERE Name = 'John';
 \`\`\``
   },
   {
-    id: 7,
+    id: 2002,
     category: 'SQL',
     question: 'What is the difference between WHERE and HAVING clauses?',
     answer: `**One-Sentence Definition:** WHERE filters rows before grouping, while HAVING filters groups after GROUP BY.
@@ -134,7 +134,7 @@ HAVING AVG(salary) > 50000;  -- Filter departments after
 \`\`\``
   },
   {
-    id: 8,
+    id: 2003,
     category: 'SQL',
     question: 'What is the difference between Stored Procedure and Function?',
     answer: `**One-Sentence Definition:** Stored Procedures are precompiled SQL code that can return multiple values and perform DML operations, while Functions must return a single value and cannot modify database state.
@@ -189,7 +189,7 @@ FROM Users;
 \`\`\``
   },
   {
-    id: 9,
+    id: 2004,
     category: 'SQL',
     question: 'What is the difference between Primary Key and Foreign Key?',
     answer: `**One-Sentence Definition:** Primary Key uniquely identifies each row in a table, while Foreign Key references the Primary Key of another table to establish relationships.
@@ -243,7 +243,7 @@ CREATE TABLE Orders (
 \`\`\``
   },
   {
-    id: 10,
+    id: 2005,
     category: 'SQL',
     question: 'What are Views, Indexes, Cursors, DDL, DML, Temp Tables, and Triggers?',
     answer: `**One-Sentence Definitions:**
@@ -320,7 +320,7 @@ END;
 \`\`\``
   },
   {
-    id: 11,
+    id: 2006,
     category: 'SQL',
     question: 'How to optimize query performance and stored procedures?',
     answer: `**One-Sentence Definition:** Query optimization involves using indexes, avoiding table scans, writing efficient queries, and analyzing execution plans to improve performance.
