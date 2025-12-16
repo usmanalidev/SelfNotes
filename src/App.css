@@ -1,0 +1,358 @@
+/* Custom styles for the Notes App */
+
+/* App Layout */
+.app-layout {
+  background-color: var(--bg-primary);
+  transition: background-color 0.3s ease;
+}
+
+.main-layout {
+  background-color: var(--bg-primary);
+  transition: background-color 0.3s ease;
+}
+
+/* Header */
+.app-header {
+  background: var(--bg-secondary) !important;
+  padding: 0 24px !important;
+  box-shadow: 0 2px 8px var(--shadow) !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+/* Search Input */
+.search-input {
+  transition: all 0.3s ease;
+}
+
+.search-input .ant-input {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.search-input .ant-input:focus,
+.search-input .ant-input-focused {
+  border-color: #1890ff !important;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.1) !important;
+}
+
+.search-input .ant-input::placeholder {
+  color: var(--text-tertiary);
+}
+
+.search-input .anticon {
+  color: var(--text-secondary);
+}
+
+.app-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1890ff;
+  transition: color 0.3s ease;
+}
+
+.theme-toggle-btn {
+  font-size: 18px;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  color: #1890ff;
+}
+
+.add-note-btn {
+  border-radius: 6px;
+  height: 40px;
+  font-weight: 500;
+}
+
+.app-content {
+  margin: 0;
+  padding: 0;
+  min-height: calc(100vh - 64px);
+  background-color: var(--bg-primary);
+  transition: background-color 0.3s ease;
+}
+
+/* Sidebar */
+.app-sidebar {
+  transition: all 0.2s;
+}
+
+.app-sidebar.light {
+  background: #fff;
+}
+
+.app-sidebar.dark {
+  background: #1f1f1f;
+}
+
+.sidebar-header {
+  padding: 16px;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.sidebar-header.light {
+  color: #1890ff;
+  border-bottom-color: #f0f0f0;
+}
+
+.sidebar-header.dark {
+  color: #1890ff;
+  border-bottom-color: #434343;
+}
+
+/* Menu styling */
+.ant-menu-item {
+  border-radius: 6px;
+  margin: 4px 8px;
+  transition: all 0.2s;
+}
+
+.ant-menu-item-selected {
+  background-color: #e6f7ff !important;
+  color: #1890ff !important;
+}
+
+[data-theme="dark"] .ant-menu-item-selected {
+  background-color: #111b26 !important;
+  color: #1890ff !important;
+}
+
+.ant-menu-item:hover {
+  background-color: var(--bg-tertiary);
+}
+
+/* Notes Container */
+.notes-container {
+  transition: background-color 0.3s ease;
+}
+
+.notes-title {
+  color: #1890ff;
+  transition: color 0.3s ease;
+}
+
+.notes-count.light {
+  color: #666;
+}
+
+.notes-count.dark {
+  color: #d9d9d9;
+}
+
+/* Collapse panel styling */
+.notes-collapse {
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.ant-collapse-item {
+  border-radius: 6px !important;
+  margin-bottom: 12px;
+  border: 1px solid var(--border-color) !important;
+  transition: all 0.3s ease;
+}
+
+.ant-collapse-header {
+  padding: 16px 20px !important;
+  font-size: 16px;
+  color: var(--text-primary) !important;
+  transition: color 0.3s ease;
+}
+
+.ant-collapse-content-box {
+  padding: 20px !important;
+  background: var(--bg-secondary);
+  transition: background-color 0.3s ease;
+}
+
+.panel-header.light {
+  color: #333;
+}
+
+.panel-header.dark {
+  color: #ffffff;
+}
+
+.note-panel {
+  margin-bottom: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.note-answer.light {
+  color: #555;
+}
+
+.note-answer.dark {
+  color: #d9d9d9;
+}
+
+.note-footer {
+  border-top: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.note-footer.light {
+  color: #999;
+}
+
+.note-footer.dark {
+  color: #8c8c8c;
+}
+
+.edit-btn {
+  color: #1890ff;
+}
+
+.edit-btn:hover {
+  color: #40a9ff;
+}
+
+/* Code block styling */
+.code-block {
+  background: var(--code-bg) !important;
+  border: 1px solid var(--code-border);
+  border-radius: 6px;
+  padding: 16px;
+  overflow-x: auto;
+  font-size: 14px;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+}
+
+.code-block code {
+  background: transparent;
+  padding: 0;
+  color: var(--code-text);
+  font-family: 'Courier New', 'Monaco', 'Menlo', monospace;
+}
+
+/* Empty state */
+.empty-card {
+  background: var(--bg-secondary);
+  transition: background-color 0.3s ease;
+}
+
+.empty-text.light {
+  color: #999;
+}
+
+.empty-text.dark {
+  color: #8c8c8c;
+}
+
+.ant-empty {
+  padding: 60px 0;
+}
+
+/* Button styling */
+.ant-btn-primary {
+  box-shadow: 0 2px 4px rgba(24, 144, 255, 0.2);
+}
+
+.ant-btn-primary:hover {
+  box-shadow: 0 4px 8px rgba(24, 144, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Modal styling */
+.ant-modal-header {
+  border-bottom: 2px solid var(--border-color);
+  padding: 20px 24px;
+  background: var(--bg-secondary);
+  transition: all 0.3s ease;
+}
+
+.ant-modal-body {
+  padding: 24px;
+  background: var(--bg-secondary);
+  transition: background-color 0.3s ease;
+}
+
+.ant-modal-content {
+  background: var(--bg-secondary);
+  transition: background-color 0.3s ease;
+}
+
+/* Form styling */
+.ant-input,
+.ant-select-selector,
+.ant-input-affix-wrapper {
+  border-radius: 6px !important;
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.ant-input:focus,
+.ant-select-focused .ant-select-selector {
+  border-color: #1890ff !important;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.1) !important;
+}
+
+.ant-input::placeholder {
+  color: var(--text-tertiary);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .ant-layout-sider {
+    position: fixed !important;
+    height: 100vh;
+    z-index: 1000;
+  }
+
+  .main-layout {
+    margin-left: 0 !important;
+  }
+
+  .app-title {
+    font-size: 18px !important;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-tertiary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #595959;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: #737373;
+}
