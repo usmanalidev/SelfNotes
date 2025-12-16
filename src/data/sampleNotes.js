@@ -10,6 +10,7 @@ import { entityFrameworkNotes } from './entityFrameworkNotes';
 import { mvcNotes } from './mvcNotes';
 import { cheatSheetNotes } from './cheatSheetNotes';
 import { generalQuestionsNotes } from './generalQuestionsNotes';
+import { agenticAINotes } from './agenticAINotes';
 import { categories } from './categories';
 
 // Combine all notes from different categories
@@ -24,6 +25,7 @@ export const sampleNotes = [
   ...designPatternsNotes,
   ...entityFrameworkNotes,
   ...mvcNotes,
+  ...agenticAINotes,
   ...cheatSheetNotes
 ];
 

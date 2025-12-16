@@ -11,6 +11,7 @@ export const categories = [
   { key: 'React JS', label: 'React JS', icon: 'ThunderboltOutlined' },
   { key: 'Angular', label: 'Angular', icon: 'RocketOutlined' },
   { key: 'Microservices', label: 'Microservices', icon: 'CloudOutlined' },
+  { key: 'Agentic AI', label: 'Agentic AI', icon: 'RobotOutlined' },
   { key: 'Cheat Sheet', label: 'Cheat Sheet', icon: 'FileTextOutlined' }
 ];
 
