@@ -10,7 +10,8 @@ import {
   AppstoreOutlined,
   BuildOutlined,
   QuestionCircleOutlined,
-  RobotOutlined
+  RobotOutlined,
+  ContainerOutlined
 } from '@ant-design/icons';
 
 const { Sider } = Layout;
@@ -26,7 +27,8 @@ const iconMap = {
   'AppstoreOutlined': AppstoreOutlined,
   'BuildOutlined': BuildOutlined,
   'QuestionCircleOutlined': QuestionCircleOutlined,
-  'RobotOutlined': RobotOutlined
+  'RobotOutlined': RobotOutlined,
+  'ContainerOutlined': ContainerOutlined
 };
 
 const Sidebar = ({ collapsed, onCollapse, selectedCategory, onCategorySelect, categories, theme, isMobile }) => {

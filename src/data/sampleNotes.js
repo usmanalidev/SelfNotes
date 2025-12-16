@@ -11,6 +11,7 @@ import { mvcNotes } from './mvcNotes';
 import { cheatSheetNotes } from './cheatSheetNotes';
 import { generalQuestionsNotes } from './generalQuestionsNotes';
 import { agenticAINotes } from './agenticAINotes';
+import { dockerNotes } from './dockerNotes';
 import { categories } from './categories';
 
 // Combine all notes from different categories
@@ -26,6 +27,7 @@ export const sampleNotes = [
   ...entityFrameworkNotes,
   ...mvcNotes,
   ...agenticAINotes,
+  ...dockerNotes,
   ...cheatSheetNotes
 ];
 

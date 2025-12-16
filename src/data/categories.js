@@ -12,6 +12,7 @@ export const categories = [
   { key: 'Angular', label: 'Angular', icon: 'RocketOutlined' },
   { key: 'Microservices', label: 'Microservices', icon: 'CloudOutlined' },
   { key: 'Agentic AI', label: 'Agentic AI', icon: 'RobotOutlined' },
+  { key: 'Docker', label: 'Docker', icon: 'ContainerOutlined' },
   { key: 'Cheat Sheet', label: 'Cheat Sheet', icon: 'FileTextOutlined' }
 ];
 
