@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Layout, Button, Space, ConfigProvider, theme, Input } from 'antd';
-import { PlusOutlined, SunOutlined, MoonOutlined, SearchOutlined } from '@ant-design/icons';
+import React, { useState, useEffect } from 'react';
+import { Layout, Button, Space, ConfigProvider, theme, Input, Drawer } from 'antd';
+import { PlusOutlined, SunOutlined, MoonOutlined, SearchOutlined, MenuOutlined } from '@ant-design/icons';
 import { ThemeProvider, useTheme } from './context/ThemeContext';
 import Sidebar from './components/Sidebar';
 import NotesDisplay from './components/NotesDisplay';
@@ -18,9 +18,28 @@ function AppContent() {
   const [modalVisible, setModalVisible] = useState(false);
   const [editingNote, setEditingNote] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
+  const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect mobile screen size
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+      if (window.innerWidth >= 768) {
+        setMobileMenuVisible(false);
+      }
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const handleCategorySelect = (category) => {
     setSelectedCategory(category);
+    if (isMobile) {
+      setMobileMenuVisible(false); // Close mobile menu after selection
+    }
   };
 
   const handleAddNote = () => {
@@ -64,55 +83,88 @@ function AppContent() {
   return (
     <ConfigProvider theme={antdThemeConfig}>
       <Layout className={`app-layout ${theme}`} style={{ minHeight: '100vh' }}>
-        <Sidebar
-          collapsed={collapsed}
-          onCollapse={setCollapsed}
-          selectedCategory={selectedCategory}
-          onCategorySelect={handleCategorySelect}
-          categories={categories}
-          theme={theme}
-        />
+        {/* Desktop Sidebar */}
+        {!isMobile && (
+          <Sidebar
+            collapsed={collapsed}
+            onCollapse={setCollapsed}
+            selectedCategory={selectedCategory}
+            onCategorySelect={handleCategorySelect}
+            categories={categories}
+            theme={theme}
+          />
+        )}
+        
+        {/* Mobile Drawer */}
+        {isMobile && (
+          <Drawer
+            title="Notes Categories"
+            placement="left"
+            onClose={() => setMobileMenuVisible(false)}
+            open={mobileMenuVisible}
+            bodyStyle={{ padding: 0 }}
+            className="mobile-drawer"
+          >
+            <Sidebar
+              collapsed={false}
+              onCollapse={() => {}}
+              selectedCategory={selectedCategory}
+              onCategorySelect={handleCategorySelect}
+              categories={categories}
+              theme={theme}
+              isMobile={true}
+            />
+          </Drawer>
+        )}
+
         <Layout
           className="main-layout"
           style={{
-            marginLeft: collapsed ? 80 : 250,
+            marginLeft: isMobile ? 0 : (collapsed ? 80 : 250),
             transition: 'margin-left 0.2s'
           }}
         >
           <Header className="app-header">
-            <h1 className="app-title">
-              Interview Prep Notes
-            </h1>
-            <Space size="middle">
+            <div className="header-left">
+              {isMobile && (
+                <Button
+                  type="text"
+                  icon={<MenuOutlined />}
+                  onClick={() => setMobileMenuVisible(true)}
+                  className="mobile-menu-btn"
+                  size="large"
+                />
+              )}
+              <h1 className="app-title">
+                {isMobile ? 'Notes' : 'Interview Prep Notes'}
+              </h1>
+            </div>
+            <Space size="middle" className="header-actions">
               <Input
                 placeholder="Search notes..."
                 prefix={<SearchOutlined />}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 allowClear
-                size="large"
-                style={{
-                  width: 300,
-                  borderRadius: '6px'
-                }}
+                size={isMobile ? "middle" : "large"}
                 className="search-input"
               />
               <Button
                 type="text"
                 icon={isDark ? <SunOutlined /> : <MoonOutlined />}
                 onClick={toggleTheme}
-                size="large"
+                size={isMobile ? "middle" : "large"}
                 className="theme-toggle-btn"
                 title={isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
               />
               <Button
                 type="primary"
                 icon={<PlusOutlined />}
-                size="large"
+                size={isMobile ? "middle" : "large"}
                 onClick={handleAddNote}
                 className="add-note-btn"
               >
-                Add Note
+                {isMobile ? '' : 'Add Note'}
               </Button>
             </Space>
           </Header>

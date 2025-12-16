@@ -27,7 +27,7 @@ const iconMap = {
   'QuestionCircleOutlined': QuestionCircleOutlined
 };
 
-const Sidebar = ({ collapsed, onCollapse, selectedCategory, onCategorySelect, categories, theme }) => {
+const Sidebar = ({ collapsed, onCollapse, selectedCategory, onCategorySelect, categories, theme, isMobile }) => {
   const isDark = theme === 'dark';
 
   const menuItems = categories.map(cat => {
@@ -38,6 +38,33 @@ const Sidebar = ({ collapsed, onCollapse, selectedCategory, onCategorySelect, ca
       label: cat.label
     };
   });
+
+  // For mobile drawer, don't use Sider component
+  if (isMobile) {
+    return (
+      <div className={`mobile-sidebar ${theme}`}>
+        <div className={`sidebar-header ${theme}`} style={{ 
+          padding: '16px', 
+          textAlign: 'center',
+          fontWeight: 'bold',
+          fontSize: '18px'
+        }}>
+          📝 Notes
+        </div>
+        <Menu
+          mode="inline"
+          selectedKeys={[selectedCategory]}
+          items={menuItems}
+          onClick={({ key }) => onCategorySelect(key)}
+          theme={isDark ? 'dark' : 'light'}
+          style={{
+            borderRight: 0,
+            marginTop: '8px'
+          }}
+        />
+      </div>
+    );
+  }
 
   return (
     <Sider

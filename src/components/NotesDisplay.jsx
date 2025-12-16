@@ -87,19 +87,23 @@ const NotesDisplay = ({ notes, selectedCategory, searchQuery, onEditNote, theme 
   return (
     <div className={`notes-container ${theme}`} style={{ padding: '24px' }}>
       <Title level={2} className={`notes-title ${theme}`} style={{ marginBottom: '24px' }}>
-        {searchQuery 
-          ? `Search Results${selectedCategory !== 'All' ? ` in ${selectedCategory}` : ''}`
-          : selectedCategory === 'All' 
-            ? 'All Notes' 
-            : `${selectedCategory} Notes`}
-        <span className={`notes-count ${theme}`} style={{ marginLeft: '12px', fontSize: '16px', fontWeight: 'normal' }}>
-          ({filteredNotes.length} {filteredNotes.length === 1 ? 'note' : 'notes'})
-        </span>
-        {searchQuery && (
-          <span className={`search-query ${theme}`} style={{ marginLeft: '12px', fontSize: '14px', fontWeight: 'normal', fontStyle: 'italic' }}>
-            for "{searchQuery}"
+        <div className="title-main">
+          {searchQuery 
+            ? `Search Results${selectedCategory !== 'All' ? ` in ${selectedCategory}` : ''}`
+            : selectedCategory === 'All' 
+              ? 'All Notes' 
+              : `${selectedCategory} Notes`}
+        </div>
+        <div className="title-meta">
+          <span className={`notes-count ${theme}`} style={{ fontSize: '16px', fontWeight: 'normal' }}>
+            ({filteredNotes.length} {filteredNotes.length === 1 ? 'note' : 'notes'})
           </span>
-        )}
+          {searchQuery && (
+            <span className={`search-query ${theme}`} style={{ fontSize: '14px', fontWeight: 'normal', fontStyle: 'italic' }}>
+              for "{searchQuery}"
+            </span>
+          )}
+        </div>
       </Title>
 
       <Collapse
