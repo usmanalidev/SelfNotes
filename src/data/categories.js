@@ -13,6 +13,7 @@ export const categories = [
   { key: 'Microservices', label: 'Microservices', icon: 'CloudOutlined' },
   { key: 'Agentic AI', label: 'Agentic AI', icon: 'RobotOutlined' },
   { key: 'Docker', label: 'Docker', icon: 'ContainerOutlined' },
+  { key: 'Software Architects', label: 'Software Architects', icon: 'TeamOutlined' },
   { key: 'Cheat Sheet', label: 'Cheat Sheet', icon: 'FileTextOutlined' }
 ];
 

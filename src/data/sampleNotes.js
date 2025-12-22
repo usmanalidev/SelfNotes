@@ -12,6 +12,7 @@ import { cheatSheetNotes } from './cheatSheetNotes';
 import { generalQuestionsNotes } from './generalQuestionsNotes';
 import { agenticAINotes } from './agenticAINotes';
 import { dockerNotes } from './dockerNotes';
+import { softwareArchitectsNotes } from './softwareArchitectsNotes';
 import { categories } from './categories';
 
 // Combine all notes from different categories
@@ -28,6 +29,7 @@ export const sampleNotes = [
   ...mvcNotes,
   ...agenticAINotes,
   ...dockerNotes,
+  ...softwareArchitectsNotes,
   ...cheatSheetNotes
 ];
 

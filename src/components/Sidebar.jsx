@@ -11,7 +11,8 @@ import {
   BuildOutlined,
   QuestionCircleOutlined,
   RobotOutlined,
-  ContainerOutlined
+  ContainerOutlined,
+  TeamOutlined
 } from '@ant-design/icons';
 
 const { Sider } = Layout;
@@ -28,7 +29,8 @@ const iconMap = {
   'BuildOutlined': BuildOutlined,
   'QuestionCircleOutlined': QuestionCircleOutlined,
   'RobotOutlined': RobotOutlined,
-  'ContainerOutlined': ContainerOutlined
+  'ContainerOutlined': ContainerOutlined,
+  'TeamOutlined': TeamOutlined
 };
 
 const Sidebar = ({ collapsed, onCollapse, selectedCategory, onCategorySelect, categories, theme, isMobile }) => {
